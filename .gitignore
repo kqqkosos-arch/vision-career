@@ -1,0 +1,9 @@
+# Local browser QA profiles
+.chrome-qa*
+.qa-*
+
+# Local tool and editor state
+.claude/
+setup-log.txt
+.env
+.env.*

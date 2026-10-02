@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e4a38">
+  <script>
+    try {
+      const saved = JSON.parse(localStorage.getItem('vision-career-demo-v2'));
+      const preference = saved && saved.preferences;
+      if (preference) {
+        document.documentElement.lang = preference.locale === 'ar' ? 'ar' : 'en';
+        document.documentElement.dir = preference.locale === 'ar' ? 'rtl' : 'ltr';
+        document.documentElement.dataset.theme = preference.theme === 'dark' ? 'dark' : 'light';
+      }
+    } catch (_) {}
+  </script>
+  <meta name="description" content="Vision Career | مسارك — an interactive career discovery demo for Saudi Arabia's evolving opportunity landscape.">
+  <title>Vision Career | مسارك</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive-polish.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="shell.skip">Skip to content</a>
+  <div id="app-chrome"></div>
+  <main id="main-content" tabindex="-1"></main>
+  <div class="sr-status" aria-live="polite" aria-atomic="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
